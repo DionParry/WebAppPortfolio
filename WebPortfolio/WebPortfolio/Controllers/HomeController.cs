@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using WebPortfolio.Models.ViewModels;
 
 namespace WebPortfolio.Controllers
 {
@@ -23,6 +25,12 @@ namespace WebPortfolio.Controllers
         {
             ViewBag.Message = "Your contact page.";
             return View();
+        }
+        
+        public async Task<ActionResult> Resume()
+        {
+            var vm =  await ResumeViewModel.LoadFrom();
+            return View(vm);
         }
     }
 }

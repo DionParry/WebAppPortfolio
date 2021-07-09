@@ -1,0 +1,85 @@
+﻿@model WebPortfolio.Models.ViewModels.ResumeViewModel
+
+<!DOCTYPE html>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+  $(window).load(function() {
+    window.print();
+    window.print();
+  });
+</script>
+<head>
+    <title>Resume</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 10pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin-bottom: 8px;
+      page-break-before: auto;
+      page-break-after: auto;
+      page-break-inside: avoid;
+    }
+    td {
+      border-style: solid;
+      border-width: 1px;
+      overflow: hidden;
+      word-break: normal;
+      border-color: black;
+      padding: 3px;
+    }
+    #tblGeneralDetails {
+      width: 100%;
+    }
+    table td {
+      padding: 5px;
+    }
+    .header-container-logo {
+      float: right;
+      height: 60px;
+      width: 60px;
+      padding-bottom: 20px;
+    }
+    .header-container-title {
+      display: inline-block;
+    }
+    .boldGrayBackground {
+      background-color: lightgrey;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <div class="header-container">
+    <h1 class="header-container-title center" style="color: #3e8f3e" >@Model.Title</h1>
+  </div>
+
+  <table id="tblGeneralDetails">
+    <tbody>
+    <tr>
+      <td class="boldGrayBackground">Name</td>
+      @* <td>@(Model.FirstName + " " + Model.Surname)</td> *@
+      <td class="boldGrayBackground">Professions</td>
+      @* <td>@Model.Trade</td> *@
+    </tr>
+    <tr>
+      <td class="boldGrayBackground">Time Served In Industry</td>
+      @* <td>@Model.TimeServedInIndustry</td> *@
+      <td class="boldGrayBackground">Age</td>
+      @* <td>@Model.Age</td> *@
+    </tr>
+    <tr>
+      <td class="boldGrayBackground">Eligibiity To Work In The UK</td>
+      @* <td colspan="3">@Model.</td> *@
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
