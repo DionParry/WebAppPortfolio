@@ -12,7 +12,7 @@
 <style>
     body {
       font-family: Arial, sans-serif;
-      font-size: 10pt;
+      font-size: 8pt;
     }
     table {
       width: 100%;
@@ -39,6 +39,9 @@
       width: 60px;
       padding-bottom: 20px;
     }
+    h3 {
+      margin-bottom: 0;
+    }
     .header-container-title {
       display: inline-block;
     }
@@ -54,7 +57,7 @@
     }
     
     #left {
-      flex: 0 0 35%;
+      flex: 0 0 45%;
     }
     
     #right {
@@ -85,24 +88,84 @@
       </tr>
     </table>
   </div>
-
   <div id="wrapper">
     <div id="left">
       <table>
         <tbody>
+          <!-- Personnel Profile Section -->
           <tr>
-            <td class="">
+            <td colspan="2">
               <h3 class="header-container-title">Personnel Profile</h3>
             </td>
           </tr>
           <tr>
-            <td style="text-align: left; white-space:nowrap;">
+            <td colspan="2" style="text-align: left; white-space:nowrap;">
               <hr class="headerSplit">
             </td>
           </tr>
           <tr>
-            <td class="">@Model.ProfileDescription</td>
+            <td colspan="2">@Model.ProfileDescription</td>
           </tr>
+          <br/>
+          
+          <!-- Contact Section -->
+          <tr>
+            <td colspan="2">
+              <h3 class="header-container-title">Contact</h3>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: left; white-space:nowrap;">
+              <hr class="headerSplit">
+            </td>
+          </tr>
+          @foreach (var (details1, details2) in Model.ContactDetails.Zip(Model.ContactDetailsDescription, Tuple.Create))
+          {
+            <tr>
+              <td style="width: 30%">@details1</td>
+              <td>@details2</td>
+            </tr>
+          }
+          <br/>
+
+          <!-- Technical Skills Section -->
+          <tr>
+            <td colspan="2">
+              <h3 class="header-container-title">Technical Skills</h3>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: left; white-space:nowrap;">
+              <hr class="headerSplit">
+            </td>
+          </tr>
+          @foreach (var skills in Model.TechnicalSkills)
+          {
+            <tr>
+              <td colspan="2">@skills</td>
+            </tr>
+          }
+          <br/>
+          
+          <!-- References Section -->
+          <tr>
+            <td colspan="2">
+              <h3 class="header-container-title">References</h3>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: left; white-space:nowrap;">
+              <hr class="headerSplit">
+            </td>
+          </tr>
+          @foreach (var reference in Model.References)
+          {
+            <tr>
+              <td colspan="2">@reference</td>
+            </tr>
+          }
+          <br/>
+
         </tbody>
       </table>
     </div>
@@ -113,7 +176,6 @@
             <td class="">
               <h3 class="header-container-title">Personnel Projects</h3>
             </td>
-            
           </tr>
           <tr style="line-height: 14px;">
             <td style="text-align: left">
@@ -132,32 +194,5 @@
       </table>
     </div>
   </div>
-  
-  @* <div style="width: 50%"> *@
-  @*    *@
-  @*   <table> *@
-  @*     <tbody> *@
-  @*     <tr> *@
-  @*       <td class=""> *@
-  @*         <h3 class="header-container-title">Personnel Profile</h3> *@
-  @*       </td> *@
-  @*       <td class="">@Model.ProfileDescription</td> *@
-  @*       <td class="">@Model.Test</td> *@
-  @*       $1$ <td>@Model.Trade</td> #1# *@
-  @*     </tr> *@
-  @*     <tr> *@
-  @*       <td class="">Time Served In Industry</td> *@
-  @*       $1$ <td>@Model.TimeServedInIndustry</td> #1# *@
-  @*       <td class="">Age</td> *@
-  @*       $1$ <td>@Model.Age</td> #1# *@
-  @*     </tr> *@
-  @*     <tr> *@
-  @*       <td class="">Eligibiity To Work In The UK</td> *@
-  @*       $1$ <td colspan="3">@Model.</td> #1# *@
-  @*     </tr> *@
-  @*     </tbody> *@
-  @*   </table> *@
-  @*   </div> *@
-
 </div>
 </body>
