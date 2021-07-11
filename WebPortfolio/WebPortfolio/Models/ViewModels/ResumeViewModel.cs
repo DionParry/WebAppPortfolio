@@ -15,8 +15,27 @@ namespace WebPortfolio.Models.ViewModels
         public IEnumerable<string> Achievements { get; set; }
         public List<string> ContactDetails { get; set; }
         public List<string> ContactDetailsDescription { get; set; }
+        public Dictionary<string, List<string>> EmploymentHistoryDescription { get; set; }
+        public string JobTitle1 { get; set; }
+        public string JobTitle2 { get; set; }
         public static async Task<ResumeViewModel> LoadFrom()
         {
+            const string jobTitle1 = "Analyst Programmer";
+            const string jobTitle2 = "Software Developer";
+            var jobDescription1 = new List<string>
+            {
+                "Responsible for developing defect free, best in class code using one or more programming/scripting " +
+                "languages with the ability to apply continuous integration techniques to extract relevant " +
+                "information from machine logs.", "Primarily making use of Regex and Linux based commands to analyse " +
+                "multiple logs before preparing a script/parser to parse over the data."
+            };
+            var jobDescription2 = new List<string>
+            {
+                "Collaborating on software projects and end-to-end development of innovative new systems.", 
+                "Writing scalable, maintainable and testable code to a high standard using C# .NET", 
+                "Maintaining existing applications and products (including older technologies).", 
+                "Responsible for overseeing/delivering weekly deployments ensuring pull requests adhere to git structure."
+            };
             var vm = new ResumeViewModel
             {
                 Title = "Software Developer",
@@ -47,6 +66,13 @@ namespace WebPortfolio.Models.ViewModels
                     "dionparry.co.uk", "https://gitlab.com/DionParry", "https://github.com/DionParry",
                     "07592 757 905", "dionjohnparry@gmail.com", "Ellesmere Port, Cheshire"
                 },
+                JobTitle1 = jobTitle1,
+                JobTitle2 = jobTitle2,
+                EmploymentHistoryDescription = new Dictionary<string, List<string>>
+                {
+                    {jobTitle1, jobDescription1},
+                    {jobTitle2, jobDescription2},
+                }
             };
 
             return vm;
