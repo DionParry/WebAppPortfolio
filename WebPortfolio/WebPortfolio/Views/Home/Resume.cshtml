@@ -10,9 +10,10 @@
 <head>
     <title>Resume</title>
 <style>
-    body {
+    .customBody {
       font-family: Arial, sans-serif;
       font-size: 8pt;
+      padding: 5px;
     }
     table {
       width: 100%;
@@ -23,20 +24,10 @@
       page-break-inside: avoid;
     }
     td {
-      border-width: 1px;
       overflow: hidden;
       word-break: normal;
       border-color: black;
       padding: 3px;
-    }
-    table td {
-      padding: 5px;
-    }
-    .header-container-logo {
-      float: right;
-      height: 60px;
-      width: 60px;
-      padding-bottom: 20px;
     }
     h3 {
       margin-bottom: 0;
@@ -47,9 +38,8 @@
     }
     .header-container-title {
       display: inline-block;
-    }
-    .boldGrayBackground {
-      background-color: lightgrey;
+      /*margin-top: 0; */
+      /*margin-bottom: 0;*/
     }
     .center {
       text-align: center;
@@ -65,7 +55,7 @@
     
     #right {
       flex: 1;
-      padding-left: 10px;
+      padding-left: 20px;
     }
     
     .headerSplit {
@@ -89,7 +79,7 @@
 </head>
 <body>
 <div>
-  <div class="header-container">
+  <div class="header-container customBody">
     <table style="border-collapse: collapse">
       <tr>
         <td style="border: none" class="center">
@@ -137,7 +127,7 @@
           @foreach (var (details1, details2) in Model.ContactDetails.Zip(Model.ContactDetailsDescription, Tuple.Create))
           {
             <tr>
-              <td style="width: 30%">@details1</td>
+              <td style="width: 25%">@details1</td>
               <td>@details2</td>
             </tr>
           }
@@ -199,7 +189,7 @@
           </tr>
           <!-- Job section 1 -->
           <tr>
-            <td>
+            <td  style="text-align: left; white-space:nowrap;">
               <h4 class="header-container-title">@Model.JobTitle1</h4>
             </td>
             <td>
