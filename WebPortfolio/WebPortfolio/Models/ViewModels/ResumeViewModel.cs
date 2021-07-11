@@ -72,7 +72,13 @@ namespace WebPortfolio.Models.ViewModels
                 {
                     {jobTitle1, jobDescription1},
                     {jobTitle2, jobDescription2},
-                }
+                },
+                Achievements =  new List<string>
+                {
+                    "Project and career expo - Best Post (1st Place)", 
+                    "Dr John Roberts Jones Prize 2018 (Nominee)"
+                },
+                
             };
 
             return vm;
