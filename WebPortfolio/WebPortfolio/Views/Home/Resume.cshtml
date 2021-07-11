@@ -1,4 +1,4 @@
-﻿@model WebPortfolio.Models.ViewModels.ResumeViewModel
+@model WebPortfolio.Models.ViewModels.ResumeViewModel
 
 <!DOCTYPE html>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -32,7 +32,7 @@
     h3 {
       margin-bottom: 0;
     }
-    h6 {
+    h5 {
       margin-top: 0; 
       margin-bottom: 0;
     }
@@ -74,6 +74,10 @@
     
     #leftColumnTable {
       border-right: 1px solid black;  
+    }
+    
+    #wrapper br {
+      display: none;
     }
   </style>
 </head>
@@ -198,7 +202,7 @@
           </tr>
           <tr>
             <td colspan="2">
-              <h6 class="header-container-title">GLI (Gaming Laboratories International), UNITED KINGDOM</h6>
+              <h5 class="header-container-title">GLI (Gaming Laboratories International), UNITED KINGDOM</h5>
             </td>
           </tr>
           @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle1])
@@ -220,7 +224,7 @@
           </tr>
           <tr>
             <td colspan="2">
-              <h6 class="header-container-title">Datascope Systems, UNITED KINGDOM</h6>
+              <h5 class="header-container-title">Datascope Systems, UNITED KINGDOM</h5>
             </td>
           </tr>
           @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle2])
