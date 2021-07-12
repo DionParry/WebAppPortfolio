@@ -8,13 +8,8 @@
   });
 </script>
 <head>
-    <title>Resume</title>
+<title>Resume</title>
 <style>
-    .customBody {
-      font-family: Arial, sans-serif;
-      font-size: 8pt;
-      padding: 5px;
-    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -38,8 +33,7 @@
     }
     .header-container-title {
       display: inline-block;
-      /*margin-top: 0; */
-      /*margin-bottom: 0;*/
+      margin-bottom: 0;
     }
     .center {
       text-align: center;
@@ -79,19 +73,20 @@
     #wrapper br {
       display: none;
     }
+    
   </style>
 </head>
 <body>
-<div>
-  <div class="header-container customBody">
+<div style="font-size: 13px">
+  <div class="header-container">
     <table style="border-collapse: collapse">
       <tr>
-        <td style="border: none" class="center">
-          <h1 class="header-container-title">@Model.ApplicantName</h1>
+        <td class="center">
+          <h2 class="header-container-title">@Model.ApplicantName</h2>
         </td>
       </tr>
       <tr>
-        <td style="border: none;" class="center">
+        <td class="center">
           <h3 class="header-container-title">@Model.Title</h3>
         </td>
       </tr>
@@ -101,10 +96,10 @@
     <div id="left">
       <table id="leftColumnTable">
         <tbody>
-          <!-- Personnel Profile Section -->
+          <!-- Personal Profile Section -->
           <tr>
             <td colspan="2">
-              <h3 class="header-container-title">Personnel Profile</h3>
+              <h3 class="header-container-title">Personal Profile</h3>
             </td>
           </tr>
           <tr>
@@ -113,7 +108,7 @@
             </td>
           </tr>
           <tr>
-            <td style="width:60%" colspan="2">@Model.ProfileDescription</td>
+            <td colspan="2">@Model.ProfileDescription</td>
           </tr>
           <br/>
           
@@ -131,7 +126,7 @@
           @foreach (var (details1, details2) in Model.ContactDetails.Zip(Model.ContactDetailsDescription, Tuple.Create))
           {
             <tr>
-              <td style="width: 25%">@details1</td>
+              <td style="width: 40%">@details1</td>
               <td>@details2</td>
             </tr>
           }
@@ -155,25 +150,27 @@
             </tr>
           }
           <br/>
+
           
-          <!-- References Section -->
-          <tr>
-            <td colspan="2">
-              <h3 class="header-container-title">References</h3>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" style="text-align: left; white-space:nowrap;">
-              <hr class="headerSplit">
-            </td>
-          </tr>
-          @foreach (var reference in Model.References)
-          {
-            <tr>
-              <td colspan="2"><li>@reference</li></td>
-            </tr>
-          }
-          <br/>
+         <!-- References Section -->
+         <tr>
+           <td colspan="2">
+             <h3 class="header-container-title">References</h3>
+           </td>
+         </tr>
+         <tr>
+           <td colspan="2" style="text-align: left; white-space:nowrap;">
+             <hr class="headerSplit">
+           </td>
+         </tr>
+         @foreach (var reference in Model.References)
+         {
+           <tr>
+             <td colspan="2"><li>@reference</li></td>
+           </tr>
+         }
+        <br/>
+           
         </tbody>
       </table>
     </div>
@@ -235,10 +232,10 @@
           }
           <br/>
         
-          <!-- Personnel Project Section -->
+          <!-- Personal Project Section -->
           <tr>
             <td colspan="2">
-              <h3 class="header-container-title">Personnel Projects</h3>
+              <h3 class="header-container-title">Personal Projects</h3>
             </td>
           </tr>
           <tr>
@@ -258,16 +255,16 @@
             <td colspan="2"><li>@Model.ProjectDescription</li></td>
           </tr>
           <br/>
-        
-          <!-- Education Section -->
+
+            <!-- Education Section -->
           <tr>
             <td colspan="2">
               <h3 class="header-container-title">Education</h3>
             </td>
           </tr>
           <tr>
-            <td style="text-align: left">
-              <hr class="headerSplitBigger">
+            <td colspan="2" style="text-align: left; white-space:nowrap;">
+              <hr class="headerSplit">
             </td>
           </tr>
           <tr>
