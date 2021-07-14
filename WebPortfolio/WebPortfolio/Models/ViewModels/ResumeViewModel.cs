@@ -24,24 +24,25 @@ namespace WebPortfolio.Models.ViewModels
             const string jobTitle2 = "Software Developer";
             var jobDescription1 = new List<string>
             {
-                "Responsible for developing defect free, best in class code using one or more programming/scripting " +
+                "Responsible for developing defect free, best in class code using multiple programming/scripting " +
                 "languages with the ability to apply continuous integration techniques to extract relevant " +
                 "information from machine logs.", "Primarily making use of Regex and Linux based commands to analyse " +
-                "multiple logs before preparing a script/parser to parse over the data."
+                "multiple logs before preparing a script/parser to parse over the data to extract relevant information."
             };
             var jobDescription2 = new List<string>
             {
                 "Collaborating on software projects and end-to-end development of innovative new systems.", 
                 "Writing scalable, maintainable and testable code to a high standard using C# .NET", 
-                "Maintaining existing applications and products (including older technologies).", 
-                "Responsible for overseeing/delivering weekly deployments ensuring pull requests adhere to git structure."
+                "Maintaining existing applications and products (including legacy technologies).", 
+                "Responsible for overseeing/delivering weekly deployments ensuring pull requests are to a high coding " +
+                "standard and adhere to git structure"
             };
             var vm = new ResumeViewModel
             {
                 Title = "Software Developer",
                 ApplicantName = "DionParry",
-                ProfileDescription = "A confident and highly motivated individual with strong problem solving abilities." +
-                                     "Skilled at working closely with others in a team environment." +
+                ProfileDescription = "A confident and highly motivated individual with strong problem solving abilities. " +
+                                     "Skilled at working closely with others in a team environment. " +
                                      "Looking for a change of pace to expand my knowledge in software development.",
                 ProjectDescription = "Using Unity and C# to develop interactive interfaces, adaptive environments with " +
                                       "use of artificial intelligence and movement mechanics whilst adhering to VR best practices.",
@@ -51,11 +52,11 @@ namespace WebPortfolio.Models.ViewModels
                     "C# .NET / MVC / REACT",
                     "DDD, TDD, SOLID PRINCIPLES",
                     "SQL / HTML / CSS / JS",
-                    "GitHub / TeamCity / Octopus",
+                    "Git / TeamCity / Octopus",
                     "Linux / SVN / Regex"
                 },
                 References = new List<string> {
-                    "Dr Llyr Ap Cenydd (Developer of Ocean Rift",
+                    "Dr Llyr Ap Cenydd (Developer of Ocean Rift)",
                     "Employment reference available upon request."
                 },
                 ContactDetails = new List<string>
@@ -75,7 +76,7 @@ namespace WebPortfolio.Models.ViewModels
                 },
                 Achievements =  new List<string>
                 {
-                    "Project and career expo - Best Post (1st Place)", 
+                    "Project and career expo - Best Poster (1st Place)", 
                     "Dr John Roberts Jones Prize 2018 (Nominee)"
                 },
                 
