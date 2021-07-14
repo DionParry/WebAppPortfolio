@@ -12,6 +12,9 @@
           <e p="FilterConfig.cs" t="Include" />
           <e p="RouteConfig.cs" t="Include" />
         </e>
+        <e p="ApplicationServices" t="Include">
+          <e p="Interfaces" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Content" t="Include">
           <e p="bootstrap-theme.css" t="Include" />
@@ -37,7 +40,11 @@
         </e>
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
-        <e p="Models" t="Include" />
+        <e p="Models" t="Include">
+          <e p="ViewModels" t="Include">
+            <e p="ResumeViewModel.cs" t="Include" />
+          </e>
+        </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
         <e p="Properties" t="Include">
@@ -66,6 +73,7 @@
             <e p="About.cshtml" t="Include" />
             <e p="Contact.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="Resume.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_Layout.cshtml" t="Include" />
