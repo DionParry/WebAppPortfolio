@@ -2,38 +2,116 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p>
-        <a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a>
-    </p>
-</div>
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.center {
+    text-align: center;
+}
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p>
-            <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a>
-        </p>
+html {
+  height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.button_slide {
+    color: #FFF;
+    border: 2px solid rgb(216, 2, 134);
+    border-radius: 5px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #D80286;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.slide_over:hover {
+    box-shadow: inset 0 0 0 50px #D80286;
+}
+
+
+#outer {
+    width: 364px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+#header1 { 
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+#header2 { 
+    padding-top: 5%;
+    color: white;
+}
+
+#upper {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lower {
+    height: 30vh;
+}
+
+.holder {
+    background-image: url("../../Image/Website-Design-Background.png");
+    background-size: cover;
+    object-fit:cover;
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+</style>
+</head>
+<body>
+<div class="holder">
+    <div id="upper">
+        <div class="center">
+            <h1 id="header1">My Portfolio</h1>
+            <h4 id="header2">Software Developer / Analyst Programmer</h4>
+            <div id="outer">
+                <a href="@Url.Action("Resume", "Home")">
+                    <div class="button_slide slide_over">Download / View CV</div>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+    <div id="lower">
         <p>
-            <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a>
-        </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p>
-            <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a>
+            Hi, my name is Dion and I’m a recent university graduate formally studying computer science in North Wales.
+            Currently working as an Analyst programmer. I specialise in developing Virtual Reality applications to
+            Android and Windows using the Unity Games Engine. I also create 3D models using Blender3D and Maya,
+            examples of both can be found on this website. So, please have a look around and if you have any queries,
+            wish to get in touch or want to view the code developed for the projects, use the social links below to
+            view my GitLab account or contact information.
         </p>
     </div>
 </div>
+</body>

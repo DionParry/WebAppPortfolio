@@ -1,6 +1,7 @@
 @model WebPortfolio.Models.ViewModels.ResumeViewModel
 
 <!DOCTYPE html>
+<html>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script>
   $(window).load(function() {
@@ -8,8 +9,14 @@
   });
 </script>
 <head>
-<title>Resume</title>
-<style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    @{
+      ViewBag.Title = "Resume";
+    }
+  </title>
+  <style>
     table {
       width: 100%;
       border-collapse: collapse;
@@ -323,4 +330,5 @@
     </div>
   </div>
 </div>
-</body>
+</body>  
+</html>
