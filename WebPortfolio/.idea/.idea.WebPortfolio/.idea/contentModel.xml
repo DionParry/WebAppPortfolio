@@ -9,11 +9,15 @@
         <e p="App_Data" t="Include" />
         <e p="App_Start" t="Include">
           <e p="BundleConfig.cs" t="Include" />
+          <e p="DependencyModule.cs" t="Include" />
           <e p="FilterConfig.cs" t="Include" />
           <e p="RouteConfig.cs" t="Include" />
         </e>
         <e p="ApplicationServices" t="Include">
-          <e p="Interfaces" t="Include" />
+          <e p="HomeApplicationService.cs" t="Include" />
+          <e p="Interfaces" t="Include">
+            <e p="IHomeApplicationService.cs" t="Include" />
+          </e>
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Content" t="Include">
@@ -40,6 +44,9 @@
         </e>
         <e p="Global.asax" t="Include" />
         <e p="Global.asax.cs" t="Include" />
+        <e p="Image" t="Include">
+          <e p="Website-Design-Background.png" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="ViewModels" t="Include">
             <e p="ResumeViewModel.cs" t="Include" />
