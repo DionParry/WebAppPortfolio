@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Projects";
+}
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.center {
+    text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.button_slide {
+    color: #FFF;
+    border: 2px solid rgb(216, 2, 134);
+    border-radius: 5px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #D80286;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.slide_over:hover {
+    box-shadow: inset 0 0 0 50px #D80286;
+}
+
+.outer {
+    width: 364px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+#header1 { 
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+#header2 { 
+    padding-top: 5%;
+    color: white;
+}
+
+#upper {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lower {
+    height: 30vh;
+    position: relative;
+}
+
+.holder {
+    background-image: url("../../Image/Website-Design-Background.png");
+    background-size: cover;
+    object-fit:cover;
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+
+.child {
+  position: absolute;
+  left: 30%;
+  transform: translate(-20%);
+  margin-top: 2%;
+}
+
+</style>
+</head>
+<body>
+<div class="holder">
+    <div id="upper">
+        <div class="center">
+            <div class="outer">
+                <a href="@Url.Action("Index", "Home")">
+                    <div class="button_slide slide_over">Game CRUD</div>
+                </a>
+            </div>
+            <div class="outer">
+                <a href="@Url.Action("Resume", "Home")">
+                    <div class="button_slide slide_over">Download / View CV</div>
+                </a>
+            </div>
+            <div class="outer">
+                <a href="@Url.Action("Resume", "Home")">
+                    <div class="button_slide slide_over">Download / View CV</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
