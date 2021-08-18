@@ -234,12 +234,34 @@
               <h3 class="header-container-title">Employment History</h3>
             </td>
           </tr>
+        <tr>
+          <td class="headerText">
+            <hr class="headerSplitBigger">
+          </td>
+        </tr>
+        
+          <!-- Job section 1 -->
           <tr>
-            <td class="headerText">
-              <hr class="headerSplitBigger">
+            <td>
+              <h4 class="header-container-title">@Model.JobTitle2</h4>
+            </td>
+            <td>
+              <h4 class="header-container-title rightAlign">2020 - Present</h4>
             </td>
           </tr>
-          <!-- Job section 1 -->
+          <tr>
+            <td colspan="2">
+              <h5 class="header-container-title">Datascope Systems, UNITED KINGDOM</h5>
+            </td>
+          </tr>
+          @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle2])
+          {
+            <tr>
+              <td colspan="2"><li>@desc</li></td>
+            </tr>
+          }
+            <br/>
+          <!-- Job section 2 -->
           <tr>
             <td class="headerText">
               <h4 class="header-container-title">@Model.JobTitle1</h4>
@@ -261,27 +283,7 @@
           }
           <br/>
         
-          <!-- Job section 2 -->
-          <tr>
-            <td>
-              <h4 class="header-container-title">@Model.JobTitle2</h4>
-            </td>
-            <td>
-              <h4 class="header-container-title rightAlign">2020 - Present</h4>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <h5 class="header-container-title">Datascope Systems, UNITED KINGDOM</h5>
-            </td>
-          </tr>
-          @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle2])
-          {
-            <tr>
-              <td colspan="2"><li>@desc</li></td>
-            </tr>
-          }
-          <br/>
+          
         
           <!-- Personal Project Section -->
           <tr>
