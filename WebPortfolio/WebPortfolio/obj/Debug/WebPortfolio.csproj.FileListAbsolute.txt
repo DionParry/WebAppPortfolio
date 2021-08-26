@@ -94,3 +94,4 @@ C:\Users\dionj\Documents\CodingProjects\WebAppPortfolio\WebPortfolio\WebPortfoli
 C:\Users\dionj\Documents\CodingProjects\WebAppPortfolio\WebPortfolio\WebPortfolio\bin\Autofac.Integration.Mvc.dll
 C:\Users\dionj\Documents\CodingProjects\WebAppPortfolio\WebPortfolio\WebPortfolio\bin\Autofac.Integration.Mvc.pdb
 C:\Users\dionj\Documents\CodingProjects\WebAppPortfolio\WebPortfolio\WebPortfolio\bin\Autofac.Integration.Mvc.xml
+C:\Users\dionj\Documents\CodingProjects\WebAppPortfolio\WebPortfolio\WebPortfolio\bin\Microsoft.VisualStudio.CodeCoverage.Shim.dll
