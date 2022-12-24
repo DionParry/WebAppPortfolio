@@ -6,9 +6,9 @@ namespace WebPortfolio.ApplicationServices
 {
     public class HomeApplicationService : IHomeApplicationService
     {
-        public async Task<ResumeViewModel> GetResumeViewModel()
+        public ResumeViewModel GetResumeViewModel()
         {
-            return await ResumeViewModel.LoadFrom();
+            return new ResumeViewModel().LoadFrom();
         }
     }
 }

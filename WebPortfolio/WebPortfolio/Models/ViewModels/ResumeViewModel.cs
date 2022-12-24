@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace WebPortfolio.Models.ViewModels
@@ -17,7 +17,7 @@ namespace WebPortfolio.Models.ViewModels
         public Dictionary<string, List<string>> EmploymentHistoryDescription { get; set; }
         public string JobTitle1 { get; set; }
         public string JobTitle2 { get; set; }
-        public static async Task<ResumeViewModel> LoadFrom()
+        public ResumeViewModel LoadFrom()
         {
             const string jobTitle1 = "Analyst Programmer";
             const string jobTitle2 = "Software Developer";

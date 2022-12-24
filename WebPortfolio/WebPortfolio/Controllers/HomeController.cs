@@ -23,9 +23,9 @@ namespace WebPortfolio.Controllers
             return View();
         }
         
-        public async Task<ActionResult> Resume()
+        public ActionResult Resume()
         {
-            var vm = await _homeApplicationService.GetResumeViewModel();
+            var vm = _homeApplicationService.GetResumeViewModel();
             return View(vm);
         }
     }

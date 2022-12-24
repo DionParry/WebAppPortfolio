@@ -5,6 +5,6 @@ namespace WebPortfolio.ApplicationServices.Interfaces
 {
     public interface IHomeApplicationService
     {
-        public Task<ResumeViewModel> GetResumeViewModel();
+        public ResumeViewModel GetResumeViewModel();
     }
 }
