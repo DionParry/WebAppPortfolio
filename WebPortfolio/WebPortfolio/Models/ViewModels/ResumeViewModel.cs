@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace WebPortfolio.Models.ViewModels
@@ -21,38 +21,40 @@ namespace WebPortfolio.Models.ViewModels
         {
             const string jobTitle1 = "Analyst Programmer";
             const string jobTitle2 = "Software Developer";
+
             var jobDescription1 = new List<string>
             {
-                "Responsible for developing defect free, best in class code using multiple programming/scripting " +
-                "languages with the ability to apply continuous integration techniques to extract relevant " +
-                "information from machine logs.", "Primarily making use of Regex and Linux based commands to analyse " +
-                "multiple logs before preparing a script/parser to parse over the data to extract relevant information."
+                "Primarily making use of Regex and Linux based commands to analyse " +
+                "multiple logs before preparing a script/parser to parse over the data whilst applying various" +
+                "integration techniques to extract relevant information."
             };
             var jobDescription2 = new List<string>
             {
-                "Collaborating on software projects and end-to-end development of innovative new systems.", 
-                "Writing scalable, maintainable and testable code to a high standard using C# .NET", 
-                "Maintaining existing applications and products (including legacy technologies).", 
-                "Responsible for overseeing/delivering weekly deployments ensuring pull requests are to a high coding " +
-                "standard and adhere to git structure"
+                "Played a key role in organising and planning the next steps for integrating existing technologies " +
+                "towards new innovative systems",
+                "Writing scalable, maintainable and testable code to a high standard using C# .NET " +
+                "whilst Maintaining existing applications and products (including legacy technologies).",
+                "Responsible for overseeing / delivering weekly deployments ensuring pull requests are to a high coding " +
+                "standard and adhere to good coding conventions/ best practices."
             };
+
             var vm = new ResumeViewModel
             {
                 Title = "Software Developer",
                 ApplicantName = "DionParry",
                 ProfileDescription = "A confident and highly motivated individual with strong problem solving abilities. " +
                                      "Skilled at working closely with others in a team environment. " +
-                                     "Looking for a change of pace to expand my knowledge in software development.",
+                                     "Looking to utilize / explore newer technologies to expand my knowledge in software development.",
                 ProjectDescription = "Using Unity and C# to develop interactive interfaces, adaptive environments with " +
                                       "use of artificial intelligence and movement mechanics whilst adhering to VR best practices.",
                 TechnicalSkills = new List<string>
                 {
-                    "Unity Game Engine (C#) / Blender / MAYA",
-                    "C# .NET / MVC / REACT",
+                    "C# .Net Framework / MVC / .Net 6",
+                    "Entity Framework / Entity Core",
+                    "React / Redux / Typescript",
                     "DDD, TDD, SOLID PRINCIPLES",
-                    "SQL / HTML / CSS / JS",
                     "Git / TeamCity / Octopus",
-                    "Linux / SVN / Regex"
+                    "Unity Game Engine (C#) / Blender / MAYA",
                 },
                 References = new List<string> {
                     "Dr Llyr Ap Cenydd (Developer of Ocean Rift)",
@@ -60,10 +62,10 @@ namespace WebPortfolio.Models.ViewModels
                 },
                 ContactDetails = new List<string>
                 {
-                    "Website", "GitLab", "GitHub", "Mobile", "Email", "Address"
+                    "GitLab", "GitHub", "Mobile", "Email", "Address"
                 },
                 ContactDetailsDescription = new List<string> {
-                    "dionparry.co.uk", "https://gitlab.com/DionParry", "https://github.com/DionParry",
+                    "https://gitlab.com/DionParry", "https://github.com/DionParry",
                     "07592 757 905", "dionjohnparry@gmail.com", "Ellesmere Port, Cheshire"
                 },
                 JobTitle1 = jobTitle1,

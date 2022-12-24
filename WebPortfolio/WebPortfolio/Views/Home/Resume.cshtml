@@ -182,7 +182,7 @@
           @foreach (var skills in Model.TechnicalSkills)
           {
             <tr>
-              <td colspan="2">@skills</td>
+              <td colspan="2"><li>@skills</li></td>
             </tr>
           }
         <br/>
@@ -257,7 +257,7 @@
           @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle2])
           {
             <tr>
-              <td colspan="2"><li>@desc</li></td>
+              <td colspan="2">@desc</td>
             </tr>
           }
             <br/>
@@ -278,13 +278,11 @@
           @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle1])
           {
             <tr>
-              <td colspan="2"><li>@desc</li></td>
+              <td colspan="2">@desc</td>
             </tr>
           }
           <br/>
-        
-          
-        
+
           <!-- Personal Project Section -->
           <tr>
             <td colspan="2">
@@ -305,7 +303,7 @@
             </td>
           </tr>
           <tr>
-            <td colspan="2"><li>@Model.ProjectDescription</li></td>
+            <td colspan="2">@Model.ProjectDescription</td>
           </tr>
           <br/>
 
