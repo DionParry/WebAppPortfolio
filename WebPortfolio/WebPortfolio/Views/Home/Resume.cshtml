@@ -95,7 +95,7 @@
     }
     
     .main {
-      font-size: 13px
+      font-size: 12px
     }
     
     .space5 {
@@ -109,226 +109,312 @@
   </style>
 </head>
 <body>
+<!-- Page 1 --> 
 <div class="main">
-  <div class="header-container">
-    <table>
+<div class="header-container">
+  <table>
+    <tr>
+      <td class="center">
+        <h2 class="header-container-title">@Model.ApplicantName</h2>
+      </td>
+    </tr>
+    <tr>
+      <td class="center space5">
+        <h3 class="header-container-title">@Model.Title</h3>
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="wrapper">
+  <div id="left">
+    <table class="leftColumnTable">
+      <tbody>
+      <!-- Personal Profile Section -->
       <tr>
-        <td class="center">
-          <h2 class="header-container-title">@Model.ApplicantName</h2>
+        <td colspan="2">
+          <h3 class="header-container-title">Personal Profile</h3>
         </td>
       </tr>
       <tr>
-        <td class="center space5">
-          <h3 class="header-container-title">@Model.Title</h3>
+        <td colspan="2" class="headerText">
+          <hr class="headerSplit">
         </td>
       </tr>
+      <tr>
+        <td colspan="2">@Model.ProfileDescription</td>
+      </tr>
+      <br/>
+
+      <!-- Contact Section -->
+      <tr>
+        <td colspan="2">
+          <h3 class="header-container-title">Contact</h3>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="headerText">
+          <hr class="headerSplit">
+        </td>
+      </tr>
+      @foreach (var (details1, details2) in Model.ContactDetails.Zip(Model.ContactDetailsDescription, Tuple.Create))
+      {
+        <tr>
+          <td class="width35">@details1</td>
+          <td>@details2</td>
+        </tr>
+      }
+      <br/>
+      </tbody>
+    </table>
+    <table class="leftColumnTable">
+      <tbody>
+
+      <!-- Technical Skills Section -->
+      <tr>
+        <td colspan="2">
+          <h3 class="header-container-title">Technical Skills</h3>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="headerText">
+          <hr class="headerSplit">
+        </td>
+      </tr>
+      @foreach (var skills in Model.TechnicalSkills)
+      {
+        <tr>
+          <td colspan="2"><li>@skills</li></td>
+        </tr>
+      }
+      <br/>
+
+      <!-- Education Section -->
+      <tr>
+        <td colspan="2">
+          <h3 class="header-container-title">Education</h3>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="headerText">
+          <hr class="headerSplit">
+        </td>
+      </tr>
+      <tr>
+        <td class="width60">
+          <h4 class="header-container-title">Bangor University</h4>
+        </td>
+        <td>
+          <h4 class="header-container-title rightAlign">2015 - 2018</h4>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><li>First class honors (Computer Science)</li></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h4 class="header-container-title">@nameof(Model.Achievements)</h4>
+        </td>
+      </tr>
+      @foreach (var item in Model.Achievements)
+      {
+        <tr>
+          <td colspan="2"><li>@item</li></td>
+        </tr>
+      }
+      <br/>
+      
+      <!-- References Section -->
+      <tr>
+        <td colspan="2">
+          <h3 class="header-container-title">References</h3>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="headerText">
+          <hr class="headerSplit">
+        </td>
+      </tr>
+      @foreach (var reference in Model.References)
+      {
+        <tr>
+          <td colspan="2"><li>@reference</li></td>
+        </tr>
+      }
+      <br/><br/>
+
+      </tbody>
     </table>
   </div>
-  <div id="wrapper">
-    <div id="left">
-      <table class="leftColumnTable">
-        <tbody>
-        <!-- Personal Profile Section -->
-        <tr>
-          <td colspan="2">
-            <h3 class="header-container-title">Personal Profile</h3>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" class="headerText">
-            <hr class="headerSplit">
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2">@Model.ProfileDescription</td>
-        </tr>
-        <br/>
-          
-        <!-- Contact Section -->
-        <tr>
-          <td colspan="2">
-            <h3 class="header-container-title">Contact</h3>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" class="headerText">
-            <hr class="headerSplit">
-          </td>
-        </tr>
-        @foreach (var (details1, details2) in Model.ContactDetails.Zip(Model.ContactDetailsDescription, Tuple.Create))
-        {
-          <tr>
-            <td class="width35">@details1</td>
-            <td>@details2</td>
-          </tr>
-        }
-        <br/>
-        </tbody>
-        </table>
-        <table class="leftColumnTable">
-        <tbody>
+  <div id="right">
+    <table>
+      <tbody>
+      <!-- Employment History Section -->
+      <tr>
+        <td colspan="2">
+          <h3 class="header-container-title">Employment History</h3>
+        </td>
+      </tr>
+      <tr>
+        <td class="headerText">
+          <hr class="headerSplitBigger">
+        </td>
+      </tr>
 
-        <!-- Technical Skills Section -->
-          <tr>
-            <td colspan="2">
-              <h3 class="header-container-title">Technical Skills</h3>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="headerText">
-              <hr class="headerSplit">
-            </td>
-          </tr>
-          @foreach (var skills in Model.TechnicalSkills)
-          {
-            <tr>
-              <td colspan="2"><li>@skills</li></td>
-            </tr>
-          }
-        <br/>
-        
-           <!-- Education Section -->
-          <tr>
-            <td colspan="2">
-              <h3 class="header-container-title">Education</h3>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" class="headerText">
-              <hr class="headerSplit">
-            </td>
-          </tr>
-          <tr>
-            <td class="width60">
-              <h4 class="header-container-title">Bangor University</h4>
-            </td>
-            <td>
-              <h4 class="header-container-title rightAlign">2015 - 2018</h4>
-            </td>
-          </tr>
+      <!-- Job section 3 -->
+      <tr>
+        <td>
+          <h4 class="header-container-title">@Model.JobTitle3</h4>
+        </td>
+        <td>
+          <h4 class="header-container-title rightAlign">2022 - Present</h4>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h5 class="header-container-title">Datascope Systems, UNITED KINGDOM</h5>
+        </td>
+      </tr>
+      @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle3])
+      {
         <tr>
-          <td colspan="2"><li>First class honors (Computer Science)</li></td>
+          <td colspan="2">@desc</td>
         </tr>
-         <tr>
-            <td colspan="2">
-              <h4 class="header-container-title">@nameof(Model.Achievements)</h4>
-            </td>
-        </tr>
-        @foreach (var item in Model.Achievements)
-        {
-          <tr>
-            <td colspan="2"><li>@item</li></td>
-          </tr>
-        }
-        <br/>
-        
-        </tbody>
-      </table>
-    </div>
-    <div id="right">
-      <table>
-        <tbody>
-          <!-- Employment History Section -->
-          <tr>
-            <td colspan="2">
-              <h3 class="header-container-title">Employment History</h3>
-            </td>
-          </tr>
+      }
+      <br/>
+      <!-- Job section 2 -->
+      <tr>
+        <td style="width: 65%">
+          <h4 class="header-container-title">@Model.JobTitle2</h4>
+        </td>
+        <td>
+          <h4 class="header-container-title rightAlign">2020 - 2022</h4>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h5 class="header-container-title">Datascope Systems, UNITED KINGDOM</h5>
+        </td>
+      </tr>
+      @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle2])
+      {
         <tr>
-          <td class="headerText">
-            <hr class="headerSplitBigger">
-          </td>
+          <td colspan="2">@desc</td>
         </tr>
-        
-          <!-- Job section 1 -->
-          <tr>
-            <td>
-              <h4 class="header-container-title">@Model.JobTitle2</h4>
-            </td>
-            <td>
-              <h4 class="header-container-title rightAlign">2020 - Present</h4>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <h5 class="header-container-title">Datascope Systems, UNITED KINGDOM</h5>
-            </td>
-          </tr>
-          @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle2])
-          {
-            <tr>
-              <td colspan="2">@desc</td>
-            </tr>
-          }
-            <br/>
-          <!-- Job section 2 -->
-          <tr>
-            <td class="headerText">
-              <h4 class="header-container-title">@Model.JobTitle1</h4>
-            </td>
-            <td>
-              <h4 class="header-container-title rightAlign">2018 - 2020 (1y, 10m)</h4>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <h5 class="header-container-title">GLI (Gaming Laboratories International), UNITED KINGDOM</h5>
-            </td>
-          </tr>
-          @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle1])
-          {
-            <tr>
-              <td colspan="2">@desc</td>
-            </tr>
-          }
-          <br/>
-
-          <!-- Personal Project Section -->
-          <tr>
-            <td colspan="2">
-              <h3 class="header-container-title">Personal Projects</h3>
-            </td>
-          </tr>
-          <tr>
-            <td class="headerText">
-              <hr class="headerSplitBigger">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h4 class="header-container-title">VR Developer</h4>
-            </td>
-            <td>
-              <h4 class="header-container-title rightAlign">2017 - Present</h4>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">@Model.ProjectDescription</td>
-          </tr>
-          <br/>
-
-          <!-- References Section -->
-           <tr>
-             <td colspan="2">
-               <h3 class="header-container-title">References</h3>
-             </td>
-           </tr>
-           <tr>
-             <td colspan="2" class="headerText">
-               <hr class="headerSplit">
-             </td>
-           </tr>
-           @foreach (var reference in Model.References)
-           {
-             <tr>
-               <td colspan="2"><li>@reference</li></td>
-             </tr>
-           }
-          <br/>
-        </tbody>
-      </table>
-    </div>
+      }
+      <br/><br/>
+      <!-- Job section 1 -->
+      <tr>
+        <td class="headerText">
+          <h4 class="header-container-title">@Model.JobTitle1</h4>
+        </td>
+        <td>
+          <h4 class="header-container-title rightAlign">2018 - 2020</h4>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h5 class="header-container-title">GLI (Gaming Laboratories International), UNITED KINGDOM</h5>
+        </td>
+      </tr>
+      @foreach (var desc in Model.EmploymentHistoryDescription[Model.JobTitle1])
+      {
+        <tr>
+          <td colspan="2">@desc</td>
+        </tr>
+      }
+      <br/>
+      </tbody>
+    </table>
   </div>
+</div>
+
+<!--  Page 2-->
+<div id="wrapper">
+  <div id="left">
+    <table class="leftColumnTable">
+      <tbody>
+      <!-- Personal Profile Section -->
+      <tr>
+        <td colspan="2">
+          <h3 class="header-container-title"></h3>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="headerText">
+          <hr class="headerSplit">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+      </tr>
+      <br/>
+      <tr>
+        <td colspan="2" class="headerText">
+          <hr class="headerSplit">
+        </td>
+      </tr>
+      <tr>
+        <td class="width60">
+          <h4 class="header-container-title"></h4>
+        </td>
+        <td>
+          <h4 class="header-container-title rightAlign"></h4>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h4 class="header-container-title"></h4>
+        </td>
+      </tr>
+      <br/>
+      </tbody>
+    </table>
+  </div>
+  <div id="right">
+    <table>
+      <tbody>
+      <!-- Personal Project Section -->
+      <tr>
+        <td colspan="2">
+          <h3 class="header-container-title">Personal Projects</h3>
+        </td>
+      </tr>
+      <tr>
+        <td class="headerText">
+          <hr class="headerSplitBigger">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h4 class="header-container-title">Mobile App Development</h4>
+        </td>
+        <td>
+          <h4 class="header-container-title rightAlign">2020 - Present</h4>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">@Model.ProjectDescription2</td>
+      </tr>
+      <br/>
+      <tr>
+        <td>
+          <h4 class="header-container-title">VR Developer</h4>
+        </td>
+        <td>
+          <h4 class="header-container-title rightAlign">2017 - 2020</h4>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">@Model.ProjectDescription</td>
+      </tr>
+      <br/>
+      </tbody>
+    </table>
+  </div>
+</div>
 </div>
 </body>  
 </html>
